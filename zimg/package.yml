@@ -1,0 +1,19 @@
+name        : zimg
+version     : 2.1
+release     : 1
+source      :
+    - https://github.com/sekrit-twc/zimg/archive/release-2.1.tar.gz : 09093bbb4d73865362e1e346762a6efdc9acc3d2cab6a2ebf5f00ba5d90b17c3
+license     :
+    - WTFPL
+component   : multimedia.library
+summary     : Scaling, colorspace conversion, and dithering library.
+description : |
+    The "z" library implements the commonly required image processing basics of scaling, colorspace conversion, and depth conversion.
+    A simple API enables conversion between any supported formats to operate with minimal knowledge from the programmer.
+setup      : |
+    %autogen
+    %configure --enable-x86simd --disable-static
+build      : |
+    %make
+install    : |
+    %make_install
